@@ -1,0 +1,74 @@
+<!--
+  DMML — Canvas Page: Week 04 — SVMs and Model Tuning
+  Paste below this comment into the Canvas HTML editor (</>). Inline styles only.
+-->
+<div style="max-width:880px;margin:0 auto;font-family:Lato,Helvetica,Arial,sans-serif;line-height:1.6;color:#1f2937;">
+
+  <div style="border-left:6px solid #2563eb;padding:4px 18px;margin-bottom:24px;">
+    <div style="text-transform:uppercase;letter-spacing:2px;font-size:13px;color:#2563eb;font-weight:700;">Week 04 &middot; Kernels &amp; Validation</div>
+    <h1 style="margin:4px 0 0;font-size:30px;color:#111827;">SVMs &amp; Model Tuning</h1>
+    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">Max-margin classifiers, the kernel trick, and how to tune any model without fooling yourself.</p>
+  </div>
+
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Overview</h2>
+  <p>Support Vector Machines find the boundary with the widest possible margin, and the <strong>kernel trick</strong> lets them draw non-linear boundaries without ever leaving linear algebra. The second half is methodology that applies to <em>every</em> model: cross-validation, grid search, pipelines, and the cardinal sin of data leakage. This is also where compute starts to bite &mdash; grid search is embarrassingly parallel and slow &mdash; so this week's exercise introduces the <strong>cluster's batch workflow</strong>.</p>
+
+  <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px 22px;margin:20px 0;">
+    <div style="font-weight:700;color:#1d4ed8;margin-bottom:8px;">By the end of this week you can&hellip;</div>
+    <ul style="margin:0;padding-left:20px;">
+      <li>Explain the max-margin idea and the role of support vectors.</li>
+      <li>Use the kernel trick (linear vs RBF) for non-linear classification.</li>
+      <li>Run k-fold cross-validation and grid search correctly.</li>
+      <li>Build leak-proof pipelines (fit the scaler on training data only).</li>
+      <li>Submit a grid search as a SLURM batch job and retrieve the results.</li>
+    </ul>
+  </div>
+
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Watch it move</h2>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/SVMMargin.gif" alt="SVM margin" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>The margin.</strong> The widest street between classes, defined by the support vectors.</p></div>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/KernelTrick.gif" alt="Kernel trick" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>The kernel trick.</strong> Lifting data into a higher dimension where it becomes linearly separable.</p></div>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/CrossValidation.gif" alt="Cross validation" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Cross-validation.</strong> Rotating the validation fold to use all the data without leaking.</p></div>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/week_04.png" alt="Skill tree, week 4 highlighted" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Where we are.</strong></p></div>
+
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Play with it</h2>
+
+  <div style="border:1px solid #e5e7eb;border-left:5px solid #2563eb;border-radius:8px;padding:16px 20px;margin:16px 0;">
+    <div style="font-weight:700;font-size:17px;color:#111827;">Karpathy's SVM demo</div>
+    <p style="margin:8px 0;">Click to add points of each class and watch the margin and support vectors update instantly. Switch between linear and RBF kernels and feel how the boundary changes.</p>
+    <a href="https://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
+  </div>
+
+  <div style="border:1px solid #e5e7eb;border-left:5px solid #7c3aed;border-radius:8px;padding:16px 20px;margin:16px 0;">
+    <div style="font-weight:700;font-size:17px;color:#111827;">Kernel trick in 3D (video)</div>
+    <p style="margin:8px 0;">The classic clip: a tangled 2D dataset that no line can separate, lifted into 3D by a polynomial kernel where a flat plane slices it cleanly. The single best intuition pump for kernels.</p>
+    <a href="https://www.youtube.com/watch?v=3liCbRZPrZA" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Watch it &rarr;</a>
+  </div>
+
+  <div style="border:1px solid #e5e7eb;border-left:5px solid #059669;border-radius:8px;padding:16px 20px;margin:16px 0;">
+    <div style="font-weight:700;font-size:17px;color:#111827;">How cross-validation carves the data (scikit-learn)</div>
+    <p style="margin:8px 0;">A visual gallery of how different CV splitters (k-fold, stratified, group, time-series) partition your data &mdash; and why the choice matters for honest evaluation.</p>
+    <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_cv_indices.html" style="display:inline-block;background:#059669;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
+  </div>
+
+  <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:16px 22px;margin:24px 0;">
+    <div style="font-weight:700;color:#b45309;margin-bottom:8px;">Optional reading</div>
+    <ul style="margin:0;padding-left:20px;">
+      <li><a href="https://www.statlearning.com/" style="color:#b45309;">An Introduction to Statistical Learning (with Python)</a> &mdash; chapter 9 (SVM) and chapter 5 (resampling / cross-validation).</li>
+    </ul>
+  </div>
+
+  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:16px 22px;margin:24px 0;">
+    <div style="font-weight:700;color:#15803d;margin-bottom:8px;">This week's exercise</div>
+    <p style="margin:0;"><strong>Digits SVM + grid search on the cluster.</strong> Train linear and RBF SVMs, then run the C&times;&gamma; grid search as a SLURM <em>batch job</em>. Hand in the job script, the SLURM output, and the best parameters/CV scores. See the <em>Assignments</em> area.</p>
+  </div>
+
+  <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:14px 20px;margin:24px 0;font-size:15px;color:#374151;">
+    <div style="font-weight:700;color:#374151;margin-bottom:6px;">🖥️ Cluster: batch jobs start here</div>
+    <p style="margin:0 0 8px;">Grid search is the moment batch submission earns its keep. Wrap your Python in a job script and submit it to the queue &mdash; SLURM finds a machine and runs it while you do something else:</p>
+    <pre style="background:#1f2937;color:#e5e7eb;padding:10px 14px;border-radius:6px;overflow:auto;font-size:13px;margin:0 0 8px;"><code>sbatch submit_cpu.slurm     # submit; returns a job ID
+squeue -u $USER             # is it running?
+cat logs/&lt;jobname&gt;_&lt;id&gt;.out   # results when it finishes</code></pre>
+    <p style="margin:0;">Match <code>--cpus-per-task</code> to <code>n_jobs</code> in <code>GridSearchCV</code>. Full reference in the <em>Cluster cheat sheet</em>.</p>
+  </div>
+
+</div>

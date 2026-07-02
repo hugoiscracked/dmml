@@ -1,0 +1,64 @@
+<!--
+  DMML — Canvas Page: Week 03 — Regression and Classification Basics
+  Paste below this comment into the Canvas HTML editor (</>). Inline styles only.
+-->
+<div style="max-width:880px;margin:0 auto;font-family:Lato,Helvetica,Arial,sans-serif;line-height:1.6;color:#1f2937;">
+
+  <div style="border-left:6px solid #2563eb;padding:4px 18px;margin-bottom:24px;">
+    <div style="text-transform:uppercase;letter-spacing:2px;font-size:13px;color:#2563eb;font-weight:700;">Week 03 &middot; Supervised Learning</div>
+    <h1 style="margin:4px 0 0;font-size:30px;color:#111827;">Regression &amp; Classification Basics</h1>
+    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">The supervised frame, the bias&ndash;variance tradeoff, and the metrics that keep us honest.</p>
+  </div>
+
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Overview</h2>
+  <p>This is the conceptual heart of the course. We introduce supervised learning &mdash; learning a function f(X)&nbsp;&approx;&nbsp;y &mdash; starting with the most interpretable models: linear and polynomial regression, then logistic regression and k-NN for classification. Along the way we meet the <strong>bias&ndash;variance tradeoff</strong> (which returns every single week from now on) and the <strong>train/test discipline</strong> that separates real ML from self-deception. We close with a careful tour of classification metrics, because accuracy alone lies.</p>
+
+  <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px 22px;margin:20px 0;">
+    <div style="font-weight:700;color:#1d4ed8;margin-bottom:8px;">By the end of this week you can&hellip;</div>
+    <ul style="margin:0;padding-left:20px;">
+      <li>Fit and interpret linear and polynomial regression, and choose the right error metric.</li>
+      <li>Explain the bias&ndash;variance tradeoff and connect it to under/overfitting.</li>
+      <li>Train logistic regression and k-NN, and explain what each assumes.</li>
+      <li>Build a confusion matrix and compute precision, recall, F1, ROC/AUC.</li>
+      <li>Say why accuracy is misleading under class imbalance.</li>
+    </ul>
+  </div>
+
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Watch it move</h2>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/BiasVariance.gif" alt="Bias-variance tradeoff" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Bias&ndash;Variance.</strong> Training error always falls with complexity; test error is U-shaped.</p></div>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/DecisionBoundary.gif" alt="Decision boundary" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Decision boundary.</strong> How logistic regression and k-NN carve up feature space differently.</p></div>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/week_03.png" alt="Skill tree, week 3 highlighted" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Where we are.</strong></p></div>
+
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Play with it</h2>
+
+  <div style="border:1px solid #e5e7eb;border-left:5px solid #2563eb;border-radius:8px;padding:16px 20px;margin:16px 0;">
+    <div style="font-weight:700;font-size:17px;color:#111827;">MLU-Explain &mdash; Linear Regression</div>
+    <p style="margin:8px 0;">Amazon's beautifully animated explainer. Drag points, watch the line of best fit move, and see residuals and R&sup2; update live.</p>
+    <a href="https://mlu-explain.github.io/linear-regression/" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
+  </div>
+
+  <div style="border:1px solid #e5e7eb;border-left:5px solid #7c3aed;border-radius:8px;padding:16px 20px;margin:16px 0;">
+    <div style="font-weight:700;font-size:17px;color:#111827;">MLU-Explain &mdash; Logistic Regression</div>
+    <p style="margin:8px 0;">The same gorgeous treatment for classification: the sigmoid, the decision boundary, and how the threshold trades precision against recall.</p>
+    <a href="https://mlu-explain.github.io/logistic-regression/" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
+  </div>
+
+  <div style="border:1px solid #e5e7eb;border-left:5px solid #dc2626;border-radius:8px;padding:16px 20px;margin:16px 0;">
+    <div style="font-weight:700;font-size:17px;color:#111827;">MLU-Explain &mdash; The Bias&ndash;Variance Tradeoff</div>
+    <p style="margin:8px 0;">The single most important concept in the course, made interactive. Slide model complexity and watch bias and variance trade off in real time.</p>
+    <a href="https://mlu-explain.github.io/bias-variance/" style="display:inline-block;background:#dc2626;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
+  </div>
+
+  <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:16px 22px;margin:24px 0;">
+    <div style="font-weight:700;color:#b45309;margin-bottom:8px;">Optional reading</div>
+    <ul style="margin:0;padding-left:20px;">
+      <li><a href="https://www.statlearning.com/" style="color:#b45309;">An Introduction to Statistical Learning (with Python)</a> &mdash; free PDF; chapters 3 (regression) and 4 (classification).</li>
+    </ul>
+  </div>
+
+  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:16px 22px;margin:24px 0;">
+    <div style="font-weight:700;color:#15803d;margin-bottom:8px;">This week's exercise</div>
+    <p style="margin:0;"><strong>Housing regression + Iris classification.</strong> Train and evaluate regression on California Housing and classification on Iris; interpret coefficients, metrics, and decision boundaries. See the <em>Assignments</em> area.</p>
+  </div>
+
+</div>

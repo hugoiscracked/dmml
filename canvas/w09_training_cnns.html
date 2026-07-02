@@ -1,0 +1,75 @@
+<!--
+  DMML — Canvas Page: Week 09 — Training Techniques and CNNs
+  Paste below this comment into the Canvas HTML editor (</>). Inline styles only.
+-->
+<div style="max-width:880px;margin:0 auto;font-family:Lato,Helvetica,Arial,sans-serif;line-height:1.6;color:#1f2937;">
+
+  <div style="border-left:6px solid #2563eb;padding:4px 18px;margin-bottom:24px;">
+    <div style="text-transform:uppercase;letter-spacing:2px;font-size:13px;color:#2563eb;font-weight:700;">Week 09 &middot; Deep Learning for Images</div>
+    <h1 style="margin:4px 0 0;font-size:30px;color:#111827;">Training Techniques &amp; CNNs</h1>
+    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">The tricks that make deep nets train &mdash; and the architecture that conquered images.</p>
+  </div>
+
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Overview</h2>
+  <p>Two threads this week. First, the <strong>training toolkit</strong> that makes deep networks actually converge: dropout, batch normalization, Adam, learning-rate schedules, early stopping, and transfer learning. Second, <strong>convolutional neural networks</strong> &mdash; which exploit the spatial structure of images through shared filters and pooling to learn a hierarchy of features, from edges to objects. This is the first week a GPU is genuinely worth it, so the exercise runs on the cluster's GPUs.</p>
+
+  <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px 22px;margin:20px 0;">
+    <div style="font-weight:700;color:#1d4ed8;margin-bottom:8px;">By the end of this week you can&hellip;</div>
+    <ul style="margin:0;padding-left:20px;">
+      <li>Apply dropout, batch norm, Adam, and LR schedules, and say what each fixes.</li>
+      <li>Explain convolution, pooling, and why CNNs beat MLPs on images.</li>
+      <li>Build and train a CNN, and read its learning curves.</li>
+      <li>Fine-tune a pre-trained backbone via transfer learning.</li>
+      <li>Request and verify a GPU on the cluster.</li>
+    </ul>
+  </div>
+
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Watch it move</h2>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/Convolution.gif" alt="Convolution" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Convolution.</strong> A filter sliding across an image to build a feature map, then pooling.</p></div>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/DropoutBatchNorm.gif" alt="Dropout and batch norm" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Dropout &amp; BatchNorm.</strong> Two of the workhorse regularization/stabilization tricks.</p></div>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/CNNArchitecture.gif" alt="CNN architecture" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>CNN architecture.</strong> The full pipeline, hierarchical features, and transfer-learning freeze/unfreeze.</p></div>
+  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/week_09.png" alt="Skill tree, week 9 highlighted" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Where we are.</strong></p></div>
+
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Play with it</h2>
+
+  <div style="border:1px solid #e5e7eb;border-left:5px solid #2563eb;border-radius:8px;padding:16px 20px;margin:16px 0;">
+    <div style="font-weight:700;font-size:17px;color:#111827;">CNN Explainer (Poloclub)</div>
+    <p style="margin:8px 0;">Hover over a live CNN and watch a real image flow through every convolution, activation, and pooling layer. The best CNN visualisation on the web, bar none.</p>
+    <a href="https://poloclub.github.io/cnn-explainer/" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
+  </div>
+
+  <div style="border:1px solid #e5e7eb;border-left:5px solid #7c3aed;border-radius:8px;padding:16px 20px;margin:16px 0;">
+    <div style="font-weight:700;font-size:17px;color:#111827;">Image Kernels explained visually (Setosa)</div>
+    <p style="margin:8px 0;">Drag a 3&times;3 kernel over a photo and watch it blur, sharpen, or detect edges. The intuition for what a single convolutional filter <em>does</em>.</p>
+    <a href="https://setosa.io/ev/image-kernels/" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
+  </div>
+
+  <div style="border:1px solid #e5e7eb;border-left:5px solid #059669;border-radius:8px;padding:16px 20px;margin:16px 0;">
+    <div style="font-weight:700;font-size:17px;color:#111827;">ConvNetJS &mdash; train a CNN on CIFAR-10 in your browser</div>
+    <p style="margin:8px 0;">Karpathy's in-browser trainer. Watch a real CNN learn to classify images live, with filters and activations updating as loss drops.</p>
+    <a href="https://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html" style="display:inline-block;background:#059669;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
+  </div>
+
+  <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:16px 22px;margin:24px 0;">
+    <div style="font-weight:700;color:#b45309;margin-bottom:8px;">Optional reading</div>
+    <ul style="margin:0;padding-left:20px;">
+      <li>Course textbook: Bishop, <em>Deep Learning &mdash; Foundations and Concepts</em> &mdash; the convolutional networks chapter.</li>
+      <li><a href="https://cs231n.github.io/convolutional-networks/" style="color:#b45309;">Stanford CS231n notes</a> &mdash; the canonical CNN reference.</li>
+    </ul>
+  </div>
+
+  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:16px 22px;margin:24px 0;">
+    <div style="font-weight:700;color:#15803d;margin-bottom:8px;">This week's exercise</div>
+    <p style="margin:0;"><strong>Fashion-MNIST CNN on a GPU.</strong> Build and train a CNN on a cluster GPU, then fine-tune a pre-trained model. Hand in the job script and a training log showing the GPU was used. See the <em>Assignments</em> area.</p>
+  </div>
+
+  <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:14px 20px;margin:24px 0;font-size:15px;color:#374151;">
+    <div style="font-weight:700;color:#374151;margin-bottom:6px;">🖥️ Cluster: GPUs this week</div>
+    <p style="margin:0 0 8px;">CNN training on CPU is painful; this is what the cluster's GPUs are for. Request one with <code>--gres=gpu:1</code> and <strong>always verify it's actually being used</strong> &mdash; PyTorch silently falls back to CPU otherwise:</p>
+    <pre style="background:#1f2937;color:#e5e7eb;padding:10px 14px;border-radius:6px;overflow:auto;font-size:13px;margin:0 0 8px;"><code>#SBATCH --gres=gpu:1
+nvidia-smi                  # GPU visible in the log?
+python -c "import torch; assert torch.cuda.is_available()"</code></pre>
+    <p style="margin:0;">For debugging: <code>srun --gres=gpu:1 --pty bash</code>. GPUs are the most contested resource &mdash; tight time limits, release when idle. See the <em>Cluster cheat sheet</em>.</p>
+  </div>
+
+</div>

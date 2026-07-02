@@ -1,0 +1,267 @@
+{
+  "title": "DATA MINING & MACHINE LEARNING",
+  "subtitle": "Model Selection Skill Tree - DMML Course Reference",
+  "canvas": {
+    "width": 76,
+    "height": 52
+  },
+  "nodes": [
+    {
+      "id": "root",
+      "label": "What is your\ndata?",
+      "week": 0,
+      "branch": "root",
+      "kind": "header",
+      "position": [38, 45.5]
+    },
+    {
+      "id": "tab",
+      "label": "Tabular /\nStructured",
+      "week": 1,
+      "branch": "tab",
+      "kind": "header",
+      "position": [11, 40]
+    },
+    {
+      "id": "ts",
+      "label": "Time Series",
+      "week": 2,
+      "branch": "ts",
+      "kind": "header",
+      "position": [28, 40]
+    },
+    {
+      "id": "unsup",
+      "label": "Unlabelled Data",
+      "week": 7,
+      "branch": "unsup",
+      "kind": "header",
+      "position": [40, 40]
+    },
+    {
+      "id": "img",
+      "label": "Images",
+      "week": 9,
+      "branch": "img",
+      "kind": "header",
+      "position": [54, 40]
+    },
+    {
+      "id": "seq",
+      "label": "Text / Sequences",
+      "week": 10,
+      "branch": "seq",
+      "kind": "header",
+      "position": [67, 40]
+    },
+    {
+      "id": "linreg",
+      "label": "Linear Regression",
+      "week": 3,
+      "branch": "tab",
+      "position": [4, 33],
+      "use_when": "Predict a continuous value",
+      "bullets": ["Interpretable coefficients", "Assumes linearity", "Fast & scalable"],
+      "libraries": ["sklearn"]
+    },
+    {
+      "id": "logreg",
+      "label": "Logistic Regression",
+      "week": 3,
+      "branch": "tab",
+      "position": [11, 33],
+      "use_when": "Binary or multiclass classification",
+      "bullets": ["Probabilistic output", "Interpretable weights", "Strong baseline"],
+      "libraries": ["sklearn"]
+    },
+    {
+      "id": "knn",
+      "label": "k-NN",
+      "week": 3,
+      "branch": "tab",
+      "position": [18, 33],
+      "use_when": "Non-parametric, instance-based tasks",
+      "bullets": ["No training phase needed", "Sensitive to scale & dims", "Slow at inference"],
+      "libraries": ["sklearn"]
+    },
+    {
+      "id": "svm",
+      "label": "SVM",
+      "week": 4,
+      "branch": "tab",
+      "position": [7, 26],
+      "use_when": "High-dim or small-dataset classification",
+      "bullets": ["Max-margin boundary", "Kernel trick (RBF, poly)", "Poor scaling to big N"],
+      "libraries": ["sklearn"]
+    },
+    {
+      "id": "tree",
+      "label": "Decision Tree",
+      "week": 5,
+      "branch": "tab",
+      "position": [15, 26],
+      "use_when": "Interpretable rule-based decisions",
+      "bullets": ["Handles mixed types natively", "Prone to overfitting", "Fully visualisable"],
+      "libraries": ["sklearn"]
+    },
+    {
+      "id": "rf",
+      "label": "Random Forest",
+      "week": 5,
+      "branch": "tab",
+      "position": [11, 19],
+      "use_when": "Robust classification or regression",
+      "bullets": ["Bagging reduces variance", "Feature importance scores", "Parallelisable"],
+      "libraries": ["sklearn"]
+    },
+    {
+      "id": "boost",
+      "label": "Gradient Boosting",
+      "week": 6,
+      "branch": "tab",
+      "position": [18, 19],
+      "use_when": "Best accuracy on structured data",
+      "bullets": ["Boosting reduces bias", "SHAP-interpretable", "Tune n_estimators & lr"],
+      "libraries": ["xgboost", "lightgbm", "catboost"]
+    },
+    {
+      "id": "shap_node",
+      "label": "SHAP",
+      "week": 6,
+      "branch": "shap_special",
+      "position": [38, 6],
+      "use_when": "Explain any black-box model",
+      "bullets": ["Model-agnostic", "Local & global views", "Pairs best with boosting"],
+      "libraries": ["shap"]
+    },
+    {
+      "id": "mlp",
+      "label": "MLP / Neural Net",
+      "week": 8,
+      "branch": "tab",
+      "position": [4, 19],
+      "use_when": "General learner for tabular tasks",
+      "bullets": ["Flexible architecture", "Needs careful tuning", "Bridge to deep learning"],
+      "libraries": ["pytorch"]
+    },
+    {
+      "id": "arima",
+      "label": "ARIMA",
+      "week": 2,
+      "branch": "ts",
+      "position": [28, 33],
+      "use_when": "Forecast univariate stationary series",
+      "bullets": ["AR + MA + differencing", "Needs stationarity check", "ACF/PACF for order"],
+      "libraries": ["statsmodels"]
+    },
+    {
+      "id": "lstm_ts",
+      "label": "LSTM  (for TS)",
+      "week": 10,
+      "branch": "ts",
+      "position": [28, 26],
+      "use_when": "Complex or multivariate series",
+      "bullets": ["Captures long-range deps", "Needs more data", "See Sequences branch"],
+      "libraries": ["pytorch"]
+    },
+    {
+      "id": "kmeans",
+      "label": "K-Means Clustering",
+      "week": 7,
+      "branch": "unsup",
+      "position": [36, 33],
+      "use_when": "Partition data into k groups",
+      "bullets": ["Fast and scalable", "Assumes spherical clusters", "Elbow / silhouette for k"],
+      "libraries": ["sklearn"]
+    },
+    {
+      "id": "dbscan",
+      "label": "DBSCAN",
+      "week": 7,
+      "branch": "unsup",
+      "position": [44, 33],
+      "use_when": "Arbitrary-shape clusters, noisy data",
+      "bullets": ["No k to set", "Detects outliers natively", "Tune eps and min_samples"],
+      "libraries": ["sklearn"]
+    },
+    {
+      "id": "pca",
+      "label": "PCA",
+      "week": 7,
+      "branch": "unsup",
+      "position": [40, 26],
+      "use_when": "Reduce dims, visualise high-dim data",
+      "bullets": ["Maximises explained variance", "Linear transform only", "Check scree plot"],
+      "libraries": ["sklearn"]
+    },
+    {
+      "id": "cnn",
+      "label": "CNN",
+      "week": 9,
+      "branch": "img",
+      "position": [54, 33],
+      "use_when": "Image classification or detection",
+      "bullets": ["Learns spatial hierarchies", "Data-hungry, GPU needed", "Strong baseline"],
+      "libraries": ["pytorch"]
+    },
+    {
+      "id": "tl",
+      "label": "Transfer Learning",
+      "week": 9,
+      "branch": "img",
+      "position": [54, 26],
+      "use_when": "Image task with limited data",
+      "bullets": ["Fine-tune pretrained backbone", "Fast convergence", "ResNet / EfficientNet"],
+      "libraries": ["pytorch"]
+    },
+    {
+      "id": "rnn",
+      "label": "RNN / LSTM",
+      "week": 10,
+      "branch": "seq",
+      "position": [64, 33],
+      "use_when": "Ordered sequences with temporal deps",
+      "bullets": ["Hidden state carries memory", "LSTM fixes vanishing grad", "Good for short seqs"],
+      "libraries": ["pytorch"]
+    },
+    {
+      "id": "transformer",
+      "label": "Transformer",
+      "week": 10,
+      "branch": "seq",
+      "position": [70, 26],
+      "use_when": "NLP or long-range sequence tasks",
+      "bullets": ["Self-attention, parallel training", "State-of-the-art NLP", "Fine-tune via HuggingFace"],
+      "libraries": ["pytorch", "huggingface"]
+    }
+  ],
+  "edges": [
+    ["root", "tab"],
+    ["root", "ts"],
+    ["root", "unsup"],
+    ["root", "img"],
+    ["root", "seq"],
+    ["tab", "linreg"],
+    ["tab", "logreg"],
+    ["tab", "knn"],
+    ["tab", "svm"],
+    ["tab", "tree"],
+    ["tab", "mlp"],
+    ["tree", "rf"],
+    ["tree", "boost"],
+    ["boost", "shap_node"],
+    ["rf", "shap_node"],
+    ["mlp", "shap_node"],
+    ["tl", "shap_node"],
+    ["transformer", "shap_node"],
+    ["ts", "arima"],
+    ["arima", "lstm_ts"],
+    ["unsup", "kmeans"],
+    ["unsup", "dbscan"],
+    ["unsup", "pca"],
+    ["img", "cnn"],
+    ["cnn", "tl"],
+    ["seq", "rnn"],
+    ["rnn", "transformer"]
+  ]
+}

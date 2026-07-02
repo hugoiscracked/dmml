@@ -1,0 +1,7 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/env/bin/python",
+    "jupyter.kernels.trusted": [
+        "/home/czx/.local/share/jupyter/kernels/dmml/kernel.json",
+        "/home/czx/Code/dmml/env/share/jupyter/kernels/python3/kernel.json"
+    ]
+}

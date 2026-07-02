@@ -1,7 +1,9 @@
-*.tex
+curriculum_dmml.tex
 *.pyc
+__pycache__/
 *.svg
 CONTEXT.md
+skill_tree/.mplconfig/
 animations/w01_setup_eda/media/
 animations/w02_time_series_arima/media/
 animations/w03_regression_classification/media/
@@ -14,3 +16,32 @@ animations/w09_training_cnns/media/
 animations/w10_sequences_transformers/media
 animations/w11_midterm_project/media/
 animations/w12_case_studies/media/
+cluster_cheatsheet.md
+cluster_lecture_insertions.md
+lecture_track.md
+*.slurm
+
+# Downloaded datasets (regenerated on demand by the notebooks)
+exercices/**/data/
+data/
+datasets/
+cifar-10-batches-py/
+
+# Large / downloadable dataset archives & binaries
+*.tar.gz
+*.tgz
+*.tar
+*.zip
+*.gz
+*.npz
+*.npy
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.parquet
+*.idx-ubyte
+*-ubyte
+*-ubyte.gz
