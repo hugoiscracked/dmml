@@ -16,10 +16,10 @@ animations/w09_training_cnns/media/
 animations/w10_sequences_transformers/media
 animations/w11_midterm_project/media/
 animations/w12_case_studies/media/
-cluster_cheatsheet.md
-cluster_lecture_insertions.md
-lecture_track.md
-*.slurm
+#cluster_cheatsheet.md
+#cluster_lecture_insertions.md
+#lecture_track.md
+#*.slurm
 
 # Downloaded datasets (regenerated on demand by the notebooks)
 exercices/**/data/
