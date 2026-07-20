@@ -12,11 +12,11 @@
 
   <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:16px 22px;margin:0 0 20px;">
     <div style="font-weight:700;color:#b91c1c;margin-bottom:6px;">📝 Midterm 1 (Lecture 1)</div>
-    <p style="margin:0;">Pen-and-paper, 2&nbsp;hours, one A4 sheet (recto-verso) allowed. Scope: <strong>everything up to W7</strong> &mdash; EDA, ARIMA, regression, classification, SVMs, cross-validation, trees, ensembles, clustering, PCA. <strong>No neural networks.</strong> Remember: best of the two midterms counts.</p>
+    <p style="margin:0;">Pen-and-paper, 2&nbsp;hours, one A4 sheet (recto-verso) allowed. Scope: <strong>everything up to W7</strong>: EDA, ARIMA, regression, classification, SVMs, cross-validation, trees, ensembles, clustering, PCA. <strong>No neural networks.</strong> Best of the two midterms counts.</p>
   </div>
 
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Overview</h2>
-  <p>After the midterm we begin neural networks. A network is just stacked linear layers with non-linear activations, trained by <strong>gradient descent</strong> and <strong>backpropagation</strong>. Everything from earlier weeks still applies &mdash; overfitting, the bias&ndash;variance tradeoff, train/test discipline &mdash; but now the model learns its own features. We build the multilayer perceptron from the ground up and train one on MNIST.</p>
+  <p>After the midterm we begin neural networks. A network is just stacked linear layers with non-linear activations, trained by <strong>gradient descent</strong> and <strong>backpropagation</strong>. Everything from earlier weeks still applies: overfitting, the bias&ndash;variance tradeoff, train/test discipline, but now the model learns its own features. We build the multilayer perceptron from the ground up and train one on MNIST.</p>
 
   <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px 22px;margin:20px 0;">
     <div style="font-weight:700;color:#1d4ed8;margin-bottom:8px;">By the end of this week you can&hellip;</div>
@@ -28,28 +28,27 @@
     </ul>
   </div>
 
-  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Watch it move</h2>
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">In motion</h2>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/MLPForward.gif" alt="MLP forward pass" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Forward pass.</strong> Activations flowing layer by layer to a prediction.</p></div>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/GradientDescent.gif" alt="Gradient descent" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Gradient descent.</strong> Rolling downhill on the loss surface toward a minimum.</p></div>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/ActivationFunctions.gif" alt="Activation functions" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Activation functions.</strong> The non-linearities that let networks bend decision boundaries.</p></div>
-  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/week_08.png" alt="Skill tree, week 8 highlighted" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Where we are.</strong></p></div>
-
-  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Play with it</h2>
+ 
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Demos</h2>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #f59e0b;border-radius:8px;padding:18px 22px;margin:16px 0;background:#fffdf7;">
-    <div style="font-weight:700;font-size:18px;color:#111827;">⭐ TensorFlow Playground &mdash; train a network in your browser</div>
-    <p style="margin:8px 0;">The one to spend real time with. Add layers and neurons, switch activations, change the dataset (try the spiral!), and watch the network learn its decision boundary live. Nothing builds intuition faster &mdash; this is the demo we'll return to in lecture.</p>
+    <div style="font-weight:700;font-size:18px;color:#111827;">⭐ TensorFlow Playground: train a network in your browser</div>
+    <p style="margin:8px 0;">My personal favourite. Add layers and neurons, switch activations, change the dataset (try the spiral!), and watch the network learn its decision boundary live.</p>
     <a href="https://playground.tensorflow.org/" style="display:inline-block;background:#f59e0b;color:#fff;text-decoration:none;font-weight:600;padding:9px 18px;border-radius:6px;">Open the Playground &rarr;</a>
   </div>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #2563eb;border-radius:8px;padding:16px 20px;margin:16px 0;">
-    <div style="font-weight:700;font-size:17px;color:#111827;">3Blue1Brown &mdash; Neural Networks (video series)</div>
-    <p style="margin:8px 0;">Grant Sanderson's legendary visual series. Episodes 1&ndash;4 cover what a network is, gradient descent, and backpropagation with unmatched clarity.</p>
+    <div style="font-weight:700;font-size:17px;color:#111827;">3Blue1Brown: Neural Networks (video series)</div>
+    <p style="margin:8px 0;">Grant Sanderson's legendary visual series. Episodes 1&ndash;4 cover what a network is, gradient descent, and backpropagation.</p>
     <a href="https://www.3blue1brown.com/topics/neural-networks" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Watch the series &rarr;</a>
   </div>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #7c3aed;border-radius:8px;padding:16px 20px;margin:16px 0;">
-    <div style="font-weight:700;font-size:17px;color:#111827;">MLU-Explain &mdash; Neural Networks</div>
+    <div style="font-weight:700;font-size:17px;color:#111827;">MLU-Explain: Neural Networks</div>
     <p style="margin:8px 0;">An interactive walk through neurons, layers, and how depth lets a network compose simple features into complex ones.</p>
     <a href="https://mlu-explain.github.io/neural-networks/" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
@@ -57,7 +56,7 @@
   <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:16px 22px;margin:24px 0;">
     <div style="font-weight:700;color:#b45309;margin-bottom:8px;">Optional reading</div>
     <ul style="margin:0;padding-left:20px;">
-      <li>Course textbook: Bishop, <em>Deep Learning &mdash; Foundations and Concepts</em> &mdash; the chapters on neural networks and backpropagation.</li>
+      <li>Course textbook: Bishop, <em>Deep Learning: Foundations and Concepts</em> the chapters on neural networks and backpropagation.</li>
     </ul>
   </div>
 

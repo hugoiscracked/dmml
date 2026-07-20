@@ -14,28 +14,27 @@
   <div style="border-left:6px solid #2563eb;padding:4px 18px;margin-bottom:24px;">
     <div style="text-transform:uppercase;letter-spacing:2px;font-size:13px;color:#2563eb;font-weight:700;">Week 01 &middot; Foundations</div>
     <h1 style="margin:4px 0 0;font-size:30px;color:#111827;">Setup &amp; Exploratory Data Analysis</h1>
-    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">Get a working environment, then learn to <em>look</em> at data before you model it.</p>
+    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">Get a working environment, then learn to look at data before you model it.</p>
   </div>
 
   <!-- ===== OVERVIEW ===== -->
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Overview</h2>
-  <p>This course is a <strong>toolbox</strong>: every week adds a method, and the real skill is knowing which one to reach for. Before we touch a single model, we spend a week on the unglamorous-but-decisive part of machine learning — getting a reproducible Python environment running, and developing an instinct for what a dataset actually <em>looks like</em>. Roughly 80% of real ML work happens here, in loading, cleaning, and exploring data. We'll use the <strong>Titanic</strong> dataset as our running example: small enough to hold in your head, rich enough to show every preprocessing decision that matters.</p>
+  <p>This course is designed as a <strong>toolbox</strong>: every week adds a method, and the real skill comes from knowing which one to reach for and how to use it. In the first week, we will be setting up your Python environments and learn about basic data exploration. Manipulating data is the backbone of real ML, and a large portion of the work is in loading, cleaning, and handling data. We'll use the <strong>Titanic</strong> dataset as an example of a complete preprocessing pipeline, with techniques that can be reapplied anywhere.</p>
 
   <!-- ===== LEARNING OBJECTIVES ===== -->
   <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px 22px;margin:20px 0;">
     <div style="font-weight:700;color:#1d4ed8;margin-bottom:8px;">By the end of this week you can&hellip;</div>
     <ul style="margin:0;padding-left:20px;">
       <li>Set up an isolated Python environment and install the course requirements.</li>
-      <li>Load a dataset with pandas and run a 60-second &ldquo;first-look&rdquo; diagnostic.</li>
-      <li>Diagnose and treat missing values, choosing a strategy per column.</li>
-      <li>Encode categoricals and scale features &mdash; and explain why the choice depends on the model.</li>
-      <li>Summarise and visualise distributions, correlations, and outliers &mdash; and know when summary statistics lie.</li>
+      <li>Load a dataset with pandas and print basic statistics.</li>
+      <li>Spot and handle missing values, choosing a strategy per column.</li>
+      <li>Encode categoricals and scale features.</li>
+      <li>Summarise and visualise distributions, correlations, and outliers.</li>
     </ul>
   </div>
 
   <!-- ===== ANIMATIONS & VISUALS ===== -->
-  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Watch it move</h2>
-  <p>Three short animations from lecture. Replay them while you work through the exercise.</p>
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">In motion</h2>
 
   <div style="margin:18px 0;">
     <img src="REPLACE_WITH_CANVAS_FILE/EDA.gif" alt="Animated EDA: column profiling, distributions, correlation heatmap" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;">
@@ -50,37 +49,31 @@
     <p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Descriptive Statistics.</strong> Mean/median/&sigma;, a box plot built step by step, and what skew does to them.</p>
   </div>
 
-  <div style="margin:18px 0;">
-    <img src="REPLACE_WITH_CANVAS_FILE/week_01.png" alt="Course skill tree with Week 1 highlighted" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;">
-    <p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Where we are.</strong> The course skill tree &mdash; this week's node is lit; everything ahead is still dim.</p>
-  </div>
 
   <!-- ===== COMPELLING / INTERACTIVE EXAMPLES ===== -->
-  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Play with it</h2>
-  <p>Interactive demos that build intuition far faster than slides. Click through, change things, break them.</p>
-
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Demos</h2>
   <!-- demo card -->
   <div style="border:1px solid #e5e7eb;border-left:5px solid #7c3aed;border-radius:8px;padding:16px 20px;margin:16px 0;">
-    <div style="font-weight:700;font-size:17px;color:#111827;">The Datasaurus Dozen &mdash; why you must <em>plot</em> your data</div>
-    <p style="margin:8px 0;">Twelve datasets with <em>identical</em> mean, variance, and correlation &mdash; yet one is a dinosaur, one is a star, one is a set of stripes. The single most convincing argument that summary statistics are not enough. (Same idea as Anscombe's quartet, taken to the extreme.)</p>
+    <div style="font-weight:700;font-size:17px;color:#111827;">The Datasaurus Dozen or why you must <em>plot</em> your data</div>
+    <p style="margin:8px 0;">Twelve datasets with identical mean, variance, and correlation, yet one is a dinosaur, one is a star, one is a set of stripes. The most visually convincing argument against summary statistics.</p>
     <a href="https://www.research.autodesk.com/publications/same-stats-different-graphs/" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #2563eb;border-radius:8px;padding:16px 20px;margin:16px 0;">
-    <div style="font-weight:700;font-size:17px;color:#111827;">Seeing Theory &mdash; statistics you can touch</div>
-    <p style="margin:8px 0;">A gorgeous interactive textbook of probability and statistics. For this week, work through <em>Basic Probability</em> and <em>Frequentist Inference</em> to build a feel for the distributions and summary stats we compute on Titanic.</p>
+    <div style="font-weight:700;font-size:17px;color:#111827;">Seeing Theory</div>
+    <p style="margin:8px 0;">Interactive textbook of probability and statistics. <em>Basic Probability</em> and <em>Frequentist Inference</em> are the two most relevant chapters for this week.</p>
     <a href="https://seeing-theory.brown.edu/" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #dc2626;border-radius:8px;padding:16px 20px;margin:16px 0;">
-    <div style="font-weight:700;font-size:17px;color:#111827;">Spurious Correlations &mdash; correlation is not causation</div>
-    <p style="margin:8px 0;">Per-capita cheese consumption tracks the number of people who die tangled in their bedsheets. A funny, memorable warning we'll come back to every time we read a correlation heatmap.</p>
+    <div style="font-weight:700;font-size:17px;color:#111827;">Spurious Correlations; correlation is not causation</div>
+    <p style="margin:8px 0;">Per-capita cheese consumption tracks the number of people who die tangled in their bedsheets. A collection of warnings against spurious correlations.</p>
     <a href="https://www.tylervigen.com/spurious-correlations" style="display:inline-block;background:#dc2626;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #059669;border-radius:8px;padding:16px 20px;margin:16px 0;">
-    <div style="font-weight:700;font-size:17px;color:#111827;">From Data to Viz &mdash; pick the right chart</div>
-    <p style="margin:8px 0;">A decision tree that takes the <em>shape</em> of your data (one number? two? categories over time?) and points you to the appropriate chart &mdash; with code in Python and the traps to avoid.</p>
+    <div style="font-weight:700;font-size:17px;color:#111827;">From Data to Viz </div>
+    <p style="margin:8px 0;">A decision tree that takes the shape of your data (one number? two? categories over time?) and points you to the appropriate chart, with Python code.</p>
     <a href="https://www.data-to-viz.com/" style="display:inline-block;background:#059669;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
@@ -88,26 +81,25 @@
   <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:16px 22px;margin:24px 0;">
     <div style="font-weight:700;color:#b45309;margin-bottom:8px;">Optional reading</div>
     <ul style="margin:0;padding-left:20px;">
-      <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/" style="color:#b45309;">Python Data Science Handbook</a> (VanderPlas, free online) &mdash; the pandas and visualisation chapters are the perfect companion to this week.</li>
-      <li>Course textbook: <em>Deep Learning &mdash; Foundations and Concepts</em>, C. M. Bishop. We lean on it later; no chapter required this week.</li>
+      <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/" style="color:#b45309;">Python Data Science Handbook</a> (VanderPlas, free online).</li>
+      <li>Course textbook: <em>Deep Learning Foundations and Concepts</em>, C. M. Bishop.</li>
     </ul>
   </div>
 
   <!-- ===== EXERCISE ===== -->
   <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:16px 22px;margin:24px 0;">
     <div style="font-weight:700;color:#15803d;margin-bottom:8px;">This week's exercise</div>
-    <p style="margin:0;"><strong>Titanic EDA &amp; preprocessing.</strong> Clean, describe, and visualise the Titanic dataset in the provided notebook. Due at the end of next week (rolling hand-over). See the <em>Assignments</em> area for the notebook and submission link.</p>
+    <p style="margin:0;"><strong>Titanic EDA &amp; preprocessing.</strong> Clean, describe, and visualise the Titanic dataset in the provided notebook. See the <em>Assignments</em> area for the notebook and submission link.</p>
   </div>
 
   <!-- ===== CLUSTER NOTE (deliberately understated) ===== -->
   <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:14px 20px;margin:24px 0;font-size:15px;color:#374151;">
     <div style="font-weight:700;color:#374151;margin-bottom:6px;">🖥️ Running on the cluster (optional this week)</div>
-    <p style="margin:0 0 8px;">The course provides a shared SLURM compute cluster so everyone has the same compute, regardless of laptop. <strong>This week is just setup:</strong> generate an SSH key, log in, and run <code>hostname</code> (part of the exercise hand-in). If your laptop struggles with any exercise, you can already run it interactively on a compute node:</p>
+    <p style="margin:0 0 8px;">The course provides a shared SLURM compute cluster to compensate for lackluster hardware. <strong>This week is just setup:</strong> generate an SSH key, log in, and run <code>hostname</code> (part of the exercise hand-in). Run it interactively on a compute node:</p>
     <pre style="background:#1f2937;color:#e5e7eb;padding:10px 14px;border-radius:6px;overflow:auto;font-size:13px;margin:0 0 8px;"><code>ssh dmml
 srun --pty bash
 source ~/dmml_env/bin/activate
 python my_script.py</code></pre>
-    <p style="margin:0;">Full batch jobs (<code>sbatch</code>) come in Week 4; GPUs in Week 9. See the <em>Cluster cheat sheet</em> for details.</p>
   </div>
 
 </div>

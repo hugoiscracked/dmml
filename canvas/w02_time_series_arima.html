@@ -8,11 +8,11 @@
   <div style="border-left:6px solid #2563eb;padding:4px 18px;margin-bottom:24px;">
     <div style="text-transform:uppercase;letter-spacing:2px;font-size:13px;color:#2563eb;font-weight:700;">Week 02 &middot; Temporal Data</div>
     <h1 style="margin:4px 0 0;font-size:30px;color:#111827;">Time Series with ARIMA</h1>
-    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">When observations are ordered in time, the IID assumption dies &mdash; and everything changes.</p>
+    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">When observations are ordered in time, the IID assumption dies</p>
   </div>
 
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Overview</h2>
-  <p>Last week every row was independent. This week we break that assumption: in a time series, each observation depends on the ones before it. That single fact reshapes how we describe data (trend, seasonality, stationarity), how we split it (never shuffle!), and how we model it. We build up to <strong>ARIMA</strong> &mdash; the classical workhorse for forecasting &mdash; piece by piece (AR + I + MA), fit it, forecast, and critically evaluate the result on the classic airline-passengers dataset.</p>
+  <p>Last week every row was independent. In a time series, each observation depends on the ones before it. That single fact changes how we describe data (trend, seasonality, stationarity), how we split it, and how we model it. We build up to <strong>ARIMA</strong> piece by piece (AR + I + MA), fit it, forecast, and evaluate the result on the airline-passengers dataset.</p>
 
   <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px 22px;margin:20px 0;">
     <div style="font-weight:700;color:#1d4ed8;margin-bottom:8px;">By the end of this week you can&hellip;</div>
@@ -25,37 +25,36 @@
     </ul>
   </div>
 
-  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Watch it move</h2>
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">In motion</h2>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/Decomposition.gif" alt="Time series decomposition" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Decomposition.</strong> Splitting a series into trend + seasonality + residual.</p></div>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/Stationarity.gif" alt="Stationarity and differencing" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Stationarity &amp; Differencing.</strong> Why most series aren't stationary, and how differencing fixes it.</p></div>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/AR1.gif" alt="AR(1) process" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>AR(1) process.</strong> How a single autoregressive coefficient shapes the dynamics.</p></div>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/ForecastCone.gif" alt="Forecast cone" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Forecast cone.</strong> Prediction intervals widening with the horizon.</p></div>
-  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/week_02.png" alt="Skill tree, week 2 highlighted" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Where we are.</strong></p></div>
 
-  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Play with it</h2>
+  <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Demos</h2>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #2563eb;border-radius:8px;padding:16px 20px;margin:16px 0;">
-    <div style="font-weight:700;font-size:17px;color:#111827;">Google Trends &mdash; seasonality in the wild</div>
-    <p style="margin:8px 0;">Type any word (try &ldquo;ice cream&rdquo;, &ldquo;flu&rdquo;, or &ldquo;taxes&rdquo;) and watch a real time series with obvious trend and yearly seasonality appear. The fastest way to feel what decomposition is describing.</p>
+    <div style="font-weight:700;font-size:17px;color:#111827;">Google Trends</div>
+    <p style="margin:8px 0;">Type any word (try &ldquo;ice cream&rdquo;, &ldquo;flu&rdquo;, or &ldquo;taxes&rdquo;) and watch a real time series with obvious trend and yearly seasonality appear. The best example of seasonality? Type "Mariah Carrey" and look at December.</p>
     <a href="https://trends.google.com/trends/" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #7c3aed;border-radius:8px;padding:16px 20px;margin:16px 0;">
     <div style="font-weight:700;font-size:17px;color:#111827;">Markov Chains, explained visually (Setosa)</div>
-    <p style="margin:8px 0;">An interactive look at systems that evolve probabilistically over time &mdash; the intuition underneath autoregressive models, where the next state depends on the current one.</p>
+    <p style="margin:8px 0;">An interactive look at systems that evolve probabilistically over time. This is the intuition behind autoregressive models, where the next state depends on the current one.</p>
     <a href="https://setosa.io/ev/markov-chains/" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #059669;border-radius:8px;padding:16px 20px;margin:16px 0;">
     <div style="font-weight:700;font-size:17px;color:#111827;">Forecasting: Principles and Practice (Hyndman)</div>
-    <p style="margin:8px 0;">The best free book on forecasting, full of live plots. The ARIMA chapter walks the exact workflow we use this week, with clear visuals for ACF/PACF and differencing.</p>
+    <p style="margin:8px 0;">The best free book on forecasting. The ARIMA chapter walks the exact workflow we use this week, with clear visuals for ACF/PACF and differencing.</p>
     <a href="https://otexts.com/fpp3/arima.html" style="display:inline-block;background:#059669;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the book &rarr;</a>
   </div>
 
   <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:16px 22px;margin:24px 0;">
     <div style="font-weight:700;color:#b45309;margin-bottom:8px;">Optional reading</div>
     <ul style="margin:0;padding-left:20px;">
-      <li>Hyndman &amp; Athanasopoulos, <a href="https://otexts.com/fpp3/" style="color:#b45309;">Forecasting: Principles and Practice</a> &mdash; chapters 8 (ARIMA) and 9 (seasonal/SARIMA).</li>
+      <li>Hyndman &amp; Athanasopoulos, <a href="https://otexts.com/fpp3/" style="color:#b45309;">Forecasting: Principles and Practice</a> chapters 8 (ARIMA) and 9 (seasonal/SARIMA).</li>
     </ul>
   </div>
 

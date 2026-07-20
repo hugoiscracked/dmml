@@ -7,16 +7,16 @@
   <div style="border-left:6px solid #2563eb;padding:4px 18px;margin-bottom:24px;">
     <div style="text-transform:uppercase;letter-spacing:2px;font-size:13px;color:#2563eb;font-weight:700;">Week 07 &middot; Unsupervised Learning</div>
     <h1 style="margin:4px 0 0;font-size:30px;color:#111827;">Clustering &amp; Dimensionality Reduction</h1>
-    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">Finding structure when there are no labels &mdash; and seeing high-dimensional data in 2D.</p>
+    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">Finding structure when there are no labels and seeing high-dimensional data in 2D.</p>
   </div>
 
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Overview</h2>
-  <p>We drop the labels. <strong>Clustering</strong> (K-means, DBSCAN, hierarchical) groups similar points; <strong>PCA</strong> compresses many correlated features into a few informative directions. Together they power exploratory analysis, segmentation, and visualisation &mdash; and PCA quietly improves many of the supervised methods from earlier weeks. We also confront the curse of dimensionality that motivates all of this.</p>
+  <p><strong>Clustering</strong> (K-means, DBSCAN, hierarchical) groups similar points; <strong>PCA</strong> compresses many correlated features into a few informative directions. Together they power exploratory analysis, segmentation, and visualisation. PCA is the standard technique to fight back on the curse of dimensionality, which plagues many of the models we have seen so far.</p>
 
   <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px 22px;margin:20px 0;">
     <div style="font-weight:700;color:#1d4ed8;margin-bottom:8px;">By the end of this week you can&hellip;</div>
     <ul style="margin:0;padding-left:20px;">
-      <li>Run K-means and choose K (elbow, silhouette) &mdash; and name its assumptions.</li>
+      <li>Run K-means and choose K (elbow, silhouette).</li>
       <li>Use DBSCAN for non-spherical clusters and outliers.</li>
       <li>Apply PCA, read the explained-variance curve, and project to 2D.</li>
       <li>Distinguish feature selection from feature extraction.</li>
@@ -27,19 +27,18 @@
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/KMeans.gif" alt="K-means clustering" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>K-means.</strong> Centroids and assignments alternating until they settle.</p></div>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/DBSCAN.gif" alt="DBSCAN clustering" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>DBSCAN.</strong> Density-based clusters of any shape, with noise points left unassigned.</p></div>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/PCA.gif" alt="Principal component analysis" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>PCA.</strong> Finding the directions of maximum variance and projecting onto them.</p></div>
-  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/week_07.png" alt="Skill tree, week 7 highlighted" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Where we are.</strong></p></div>
 
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Play with it</h2>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #2563eb;border-radius:8px;padding:16px 20px;margin:16px 0;">
     <div style="font-weight:700;font-size:17px;color:#111827;">Visualizing K-Means (Naftali Harris)</div>
-    <p style="margin:8px 0;">Pick a dataset shape, drop your own centroids, and step through the algorithm. The clearest way to see why initialization matters and where K-means breaks.</p>
+    <p style="margin:8px 0;">Pick a dataset shape, drop your own centroids, and step through the algorithm. Look for why initialization matters and where K-means breaks.</p>
     <a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #7c3aed;border-radius:8px;padding:16px 20px;margin:16px 0;">
     <div style="font-weight:700;font-size:17px;color:#111827;">Visualizing DBSCAN (Naftali Harris)</div>
-    <p style="margin:8px 0;">The companion demo. Tune &epsilon; and min-points and watch DBSCAN find clusters K-means can't &mdash; like concentric rings &mdash; and flag noise.</p>
+    <p style="margin:8px 0;">The companion demo. Tune &epsilon; and min-points and watch DBSCAN find clusters K-means can't.</p>
     <a href="https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
@@ -52,7 +51,7 @@
   <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:16px 22px;margin:24px 0;">
     <div style="font-weight:700;color:#b45309;margin-bottom:8px;">Optional reading</div>
     <ul style="margin:0;padding-left:20px;">
-      <li><a href="https://www.statlearning.com/" style="color:#b45309;">An Introduction to Statistical Learning (with Python)</a> &mdash; chapter 12 (unsupervised learning).</li>
+      <li><a href="https://www.statlearning.com/" style="color:#b45309;">An Introduction to Statistical Learning (with Python)</a> chapter 12 (unsupervised learning).</li>
     </ul>
   </div>
 

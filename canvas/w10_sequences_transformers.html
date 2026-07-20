@@ -7,11 +7,11 @@
   <div style="border-left:6px solid #2563eb;padding:4px 18px;margin-bottom:24px;">
     <div style="text-transform:uppercase;letter-spacing:2px;font-size:13px;color:#2563eb;font-weight:700;">Week 10 &middot; Sequences &amp; Attention</div>
     <h1 style="margin:4px 0 0;font-size:30px;color:#111827;">Sequences &amp; Transformers</h1>
-    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">From recurrence and memory to attention &mdash; the architecture behind modern AI.</p>
+    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">From recurrence and memory to attention and the architecture behind modern AI.</p>
   </div>
 
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Overview</h2>
-  <p>The technical finale. We start with <strong>RNNs and LSTMs</strong>, which process sequences step by step and carry a hidden state &mdash; powerful, but hampered by vanishing gradients. Then the leap: <strong>attention</strong> lets a model look directly at any part of the input, and the <strong>Transformer</strong> builds entirely on it, dropping recurrence for parallelism. This is the architecture behind the large language models reshaping the field; we close by fine-tuning one.</p>
+  <p>We start with <strong>RNNs and LSTMs</strong>, which process sequences step by step and carry a hidden state. Then the breakthrough: <strong>attention</strong> lets a model look directly at any part of the input, and the <strong>Transformer</strong> builds entirely on it, dropping recurrence for parallelism. This is the architecture behind the large language models reshaping the field; we close by fine-tuning one.</p>
 
   <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px 22px;margin:20px 0;">
     <div style="font-weight:700;color:#1d4ed8;margin-bottom:8px;">By the end of this week you can&hellip;</div>
@@ -28,13 +28,12 @@
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/Attention.gif" alt="Attention" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Attention.</strong> From the seq2seq bottleneck to attention weights and the self-attention matrix.</p></div>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/Transformer.gif" alt="Transformer" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Transformer.</strong> Positional encoding, an encoder layer with multi-head attention and residuals, stacked.</p></div>
   <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/FineTuning.gif" alt="Fine-tuning" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Fine-tuning.</strong> Reusing a pre-trained model: tokenisation, strategies, and learning-rate sensitivity.</p></div>
-  <div style="margin:18px 0;"><img src="REPLACE_WITH_CANVAS_FILE/week_10.png" alt="Skill tree, week 10 highlighted" style="width:100%;border-radius:8px;border:1px solid #e5e7eb;"><p style="color:#6b7280;font-size:14px;margin:6px 0 0;"><strong>Where we are.</strong></p></div>
 
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Play with it</h2>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #2563eb;border-radius:8px;padding:16px 20px;margin:16px 0;">
     <div style="font-weight:700;font-size:17px;color:#111827;">Transformer Explainer (Poloclub)</div>
-    <p style="margin:8px 0;">Type a sentence and watch a live GPT-2 compute attention and predict the next token, layer by layer. The interactive counterpart to the lecture animation.</p>
+    <p style="margin:8px 0;">Type a sentence and watch a live GPT-2 compute attention and predict the next token, layer by layer.</p>
     <a href="https://poloclub.github.io/transformer-explainer/" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
@@ -46,27 +45,27 @@
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #0891b2;border-radius:8px;padding:16px 20px;margin:16px 0;">
     <div style="font-weight:700;font-size:17px;color:#111827;">LLM Visualization (bbycroft)</div>
-    <p style="margin:8px 0;">A breathtaking 3D walkthrough of every matrix multiply inside a working GPT model. Fly through the network and watch a token get predicted. Optional but unforgettable.</p>
+    <p style="margin:8px 0;">A breathtaking 3D walkthrough of every matrix multiply inside a working GPT model. Fly through the network and watch a token get predicted.</p>
     <a href="https://bbycroft.net/llm" style="display:inline-block;background:#0891b2;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #059669;border-radius:8px;padding:16px 20px;margin:16px 0;">
     <div style="font-weight:700;font-size:17px;color:#111827;">The Unreasonable Effectiveness of RNNs (Karpathy)</div>
-    <p style="margin:8px 0;">The classic post on what recurrent nets can do, with character-level models that generate Shakespeare, code, and more &mdash; the motivation for sequence modeling.</p>
+    <p style="margin:8px 0;">The classic post on what recurrent nets can do, with character-level models that generate Shakespeare, code, and more.</p>
     <a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/" style="display:inline-block;background:#059669;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Open the demo &rarr;</a>
   </div>
 
   <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:16px 22px;margin:24px 0;">
     <div style="font-weight:700;color:#b45309;margin-bottom:8px;">Optional reading</div>
     <ul style="margin:0;padding-left:20px;">
-      <li>Course textbook: Bishop, <em>Deep Learning &mdash; Foundations and Concepts</em> &mdash; the chapters on sequence models, attention, and transformers.</li>
-      <li><a href="https://huggingface.co/learn/nlp-course" style="color:#b45309;">The Hugging Face NLP Course</a> &mdash; free, hands-on, mirrors this week's exercise.</li>
+      <li>Course textbook: Bishop, <em>Deep Learning Foundations and Concepts</em> the chapters on sequence models, attention, and transformers.</li>
+      <li><a href="https://huggingface.co/learn/nlp-course" style="color:#b45309;">The Hugging Face NLP Course</a> free, hands-on, mirrors this week's exercise.</li>
     </ul>
   </div>
 
   <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:16px 22px;margin:24px 0;">
     <div style="font-weight:700;color:#15803d;margin-bottom:8px;">This week's exercise</div>
-    <p style="margin:0;"><strong>IMDB sentiment: LSTM vs DistilBERT.</strong> Train an LSTM, then fine-tune a pre-trained transformer, and compare performance and training behaviour. Use a cluster GPU. See the <em>Assignments</em> area.</p>
+    <p style="margin:0;"><strong>IMDB sentiment: LSTM vs DistilBERT.</strong> Train an LSTM, then fine-tune a pre-trained transformer, and compare performance and training behaviour. See the <em>Assignments</em> area.</p>
   </div>
 
 </div>
