@@ -8,40 +8,39 @@
   <div style="border-left:6px solid #2563eb;padding:4px 18px;margin-bottom:24px;">
     <div style="text-transform:uppercase;letter-spacing:2px;font-size:13px;color:#2563eb;font-weight:700;">Course Project &middot; 20% of grade</div>
     <h1 style="margin:4px 0 0;font-size:30px;color:#111827;">The Project</h1>
-    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">A semester-long thread: pick a problem early, then grow it as the toolbox grows.</p>
+    <p style="margin:6px 0 0;color:#6b7280;font-size:16px;">Pick a problem early, then solve it as the toolbox grows.</p>
   </div>
 
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">How the project works</h2>
-  <p>The project is where the toolbox meets a real problem. The goal is not novelty &mdash; it's <strong>rigorous application</strong>. You'll work in groups of up to four, and you start <strong>early (Week 6)</strong> &mdash; but you don't have to know everything to begin. The trick:</p>
+  <p>The project is where the toolbox meets a real problem. The goal is <strong>rigorous application</strong>. You'll work in groups of up to four, and you start <strong>early (Week 6)</strong> but you don't have to know everything to begin.</p>
 
   <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px 22px;margin:20px 0;">
     <div style="font-weight:700;color:#1d4ed8;margin-bottom:8px;">🧵 Your dataset travels with you</div>
-    <p style="margin:0;">Choose a dataset and frame a problem now, with the tools you have. Then, as each new method arrives &mdash; clustering &amp; PCA (W7), neural networks (W8), CNNs (W9), transformers (W10) &mdash; <strong>apply it to your own data</strong>. By the final week you'll have layered the most powerful tools in the course onto a problem you've lived with for six weeks. The interesting tools are still ahead of you; the project is where you'll try them.</p>
+    <p style="margin:0;">Choose a dataset and frame a problem. Then, as each new method arrives: clustering &amp; PCA (W7), neural networks (W8), CNNs (W9), transformers (W10) <strong>apply it to your own data if relevant</strong>. By the final week you'll have the tools to deal with all common types of data. </p>
   </div>
 
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">What a strong project looks like</h2>
   <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:16px 22px;margin:16px 0;">
     <ul style="margin:0;padding-left:20px;">
-      <li><strong>Framed first.</strong> Inputs, target, and evaluation metric defined <em>before</em> modeling.</li>
-      <li><strong>Baseline always.</strong> Start with a stupid baseline (majority class, predict-the-mean); report how much you beat it.</li>
-      <li><strong>Broad.</strong> Compare several model families across the toolbox, <em>including at least one advanced method</em> (boosting and/or a neural approach). A single decision tree is not a project.</li>
+      <li><strong>Framing.</strong> Inputs, target, and evaluation metric defined <em>before</em> modeling.</li>
+      <li><strong>Baseline always.</strong> Start with a naive baseline (majority class, predict-the-mean); report how much you beat it.</li>
+      <li><strong>Broad.</strong> Compare several model families across the toolbox, <em>including at least one advanced method</em> (boosting and/or a neural approach).</li>
       <li><strong>Leak-proof.</strong> Test set untouched until the end; CV for tuning; pipelines for preprocessing.</li>
-      <li><strong>Interpreted &amp; honest.</strong> Explain <em>why</em> a model works (feature importance, SHAP), do real error analysis, and write an honest limitations section.</li>
+      <li><strong>Interpreted &amp; honest.</strong> Explain <em>why</em> a model works (feature importance, SHAP, other method) and study the failure modes.</li>
     </ul>
   </div>
-  <p style="color:#6b7280;font-size:15px;">A note on tools like LLMs: they'll happily write the code. They will not do <em>your</em> error analysis on <em>your</em> data, justify <em>your</em> model choices, or find where <em>your</em> model fails &mdash; and that's exactly what the grade rewards. Expect to explain your choices in the project labs.</p>
 
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Find a dataset</h2>
-  <p>Avoid toy sets (MNIST, Iris) and heavily Kaggle-overfit ones. Aim for &gt;1000 rows, a clear license, and a question that matches the data.</p>
+  <p>Avoid toy sets already used in the assignemnts (MNIST, Iris). Aim for &gt;1000 rows, and a simple question about the data.</p>
 
   <div style="border:1px solid #e5e7eb;border-left:5px solid #2563eb;border-radius:8px;padding:16px 20px;margin:16px 0;">
     <div style="font-weight:700;font-size:17px;color:#111827;">UCI Machine Learning Repository</div>
-    <p style="margin:8px 0;">Hundreds of well-documented, classic datasets across domains &mdash; a safe, citable starting point.</p>
+    <p style="margin:8px 0;">Hundreds of well-documented, classic datasets across domains.</p>
     <a href="https://archive.ics.uci.edu/" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Browse &rarr;</a>
   </div>
   <div style="border:1px solid #e5e7eb;border-left:5px solid #7c3aed;border-radius:8px;padding:16px 20px;margin:16px 0;">
     <div style="font-weight:700;font-size:17px;color:#111827;">OpenML</div>
-    <p style="margin:8px 0;">Thousands of datasets with metadata and a clean Python API (<code>openml</code>) &mdash; great for reproducible, well-described tabular problems.</p>
+    <p style="margin:8px 0;">Thousands of datasets with metadata and a clean Python API (<code>openml</code>)</p>
     <a href="https://www.openml.org/" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:6px;">Browse &rarr;</a>
   </div>
   <div style="border:1px solid #e5e7eb;border-left:5px solid #059669;border-radius:8px;padding:16px 20px;margin:16px 0;">
@@ -53,17 +52,17 @@
   <h2 style="font-size:22px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;">Timeline &amp; deliverables</h2>
   <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:16px 22px;margin:16px 0;">
     <ul style="margin:0;padding-left:20px;">
-      <li><strong>Week 6 &mdash; Kickoff.</strong> Form your group, choose a dataset, frame the problem. Start EDA + a baseline with the tools you have.</li>
-      <li><strong>Weeks 7&ndash;10 &mdash; Grow it.</strong> Each week, fold the new method into your project as you learn it.</li>
-      <li><strong>Week 9 &mdash; Proposal due (pass/fail).</strong> One page: problem, dataset, evaluation metric, baseline plan.</li>
-      <li><strong>Weeks 11&ndash;12 &mdash; Project labs + clinic.</strong> Dedicated in-class time; methodology deep-dive in W11.</li>
-      <li><strong>End of Week 12 &mdash; Report due.</strong> ≈8&ndash;15 pages: Problem → Data → Methods → Results → Interpretation → Limitations → Conclusion. <em>Deliberately before the exam period.</em></li>
+      <li><strong>Week 6 Kickoff.</strong> Form your group, choose a dataset, frame the problem. Start EDA + a baseline with the tools you have.</li>
+      <li><strong>Weeks 7-10  Deep learning methods.</strong> Implement the latest methods to your dataset if it fits the data.</li>
+      <li><strong>Week 9 Proposal due (pass/fail).</strong> One page with a dataset, a problem, evaluation metrics, and a baseline plan.</li>
+      <li><strong>Weeks 11-12 Project help.</strong> Dedicated in-class time; examples using all the different methods.</li>
+      <li><strong>End of Week 12 Report due.</strong> 6-8 pages: Problem → Data → Methods → Results → Interpretation → Limitations → Conclusion.</li>
     </ul>
   </div>
 
   <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:14px 20px;margin:24px 0;font-size:15px;color:#374151;">
-    <div style="font-weight:700;color:#374151;margin-bottom:6px;">🖥️ Your project runs on the cluster</div>
-    <p style="margin:0;">Nothing new to learn &mdash; you've used the cluster since Week 1 (access + interactive sessions), Week 4 (CPU batch jobs), and Week 9 (GPU). Develop interactively, then submit batch jobs for the heavy runs. See the <em>Cluster cheat sheet</em> and the <code>submit_*.slurm</code> templates.</p>
+    <div style="font-weight:700;color:#374151;margin-bottom:6px;">Run it on the cluster</div>
+    <p style="margin:0;">Heavier projects might require you to run jobs on the cluster. Consult the cluster documentation for templates and help on how to setup a job.</p>
   </div>
 
 </div>
